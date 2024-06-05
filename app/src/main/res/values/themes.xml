@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ALQURAN" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.UASAlQuran" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
     </style>
 </resources>

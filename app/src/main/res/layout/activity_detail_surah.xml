@@ -1,16 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
     tools:context=".DetailSurahActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewAyat"
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="190dp"
+        android:padding="20dp"
+        android:background="@drawable/satu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</LinearLayout>
+        <TextView
+            android:textColor="@color/purple_700"
+            android:id="@+id/tvJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="5dp"
+            android:textSize="25sp"
+            android:text="@string/app_name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvJumlahAyat"
+            android:textColor="@color/purple_700"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:layout_below="@+id/tvJudul"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:text="@string/jumlah_ayat" />
+
+        <TextView
+            android:textColor="@color/purple_700"
+            android:id="@+id/tvNamaArab"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="18sp"
+            android:layout_below="@+id/tvJumlahAyat"
+            android:text="@string/arabic" />
+
+        <TextView
+            android:textColor="@color/purple_700"
+            android:id="@+id/tvTempat"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:textSize="18sp"
+            android:layout_below="@+id/tvNamaArab"
+            android:text="@string/tempat" />
+
+        <TextView
+            android:id="@+id/tvNoSurah"
+            android:textColor="@color/purple_700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="15dp"
+            android:text="@string/number" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="410dp"
+        android:layout_height="501dp"
+        android:layout_marginTop="234dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAyat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="268dp" />
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btAudio"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="189dp"
+        android:text="@string/audio"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
